@@ -1,2 +1,4 @@
 look into static cam and arp entries
+analyze ipv4 packet header
 CDP is cisco proprietary and is clear text
+icmp 8,3
