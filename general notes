@@ -49,7 +49,7 @@ wait
 
 
 
-
+             ; ; ;;; ;   ;;; ;;; ;;;;;; ;;;;;;;;;;;;; ;; PASSIVE INTERNAL DISCOVERY;;; ;; ;  ;; ;;; ;;
 ::network connections:: 
 Windows: netstat
 Linux: ss -antlp
@@ -58,5 +58,38 @@ Linux: ss -antlp
 service files::
 Windows: %SystemRoot%\system32\drivers\etc\services
 Linux/Unix: /etc/services
+
+
+
+
+command path:::
+  which
+  whereis
+
+
+file search:::
+find / -name hint* 2> /dev/null
+find / -iname flag* 2> /dev/null
+
+
+::::::::::ALWAYS CHECK THE SHARE DRIVE:::::::::
+ls -al /usr/share/cctc
+\
+
+
+
+::::::::::::::::::::::::::::::::::::::::ACTIVE INTERNAL SCANNING:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+Ping scanning
+
+ping -c 1 172.16.82.106
+
+for i in {1..254}; do (ping -c 1 172.16.82.$i | grep "bytes from" &) ; done
+
+sudo nmap -sP 172.16.82.96/27
+
+
+
+
 
 
