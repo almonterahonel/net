@@ -5,3 +5,46 @@ icmp 8,3
 
 
 ping a range command:::::        for i in {1..254}; do (ping -c 1 172.16.82.$i | grep "bytes from" &) ; done
+
+
+
+
+scan a range of ip's for specific ports with netcat tcp::: for i in {97..126}; do nc -nvzw1 172.16.82.$i 20-23 80 2>&1 & done 
+                                                    udp::: for i in {97..127}; do nc -nuvzw1 172.16.82.$i 1000-2000 2>&1 & done
+
+tcp network scan with NETCAT:::
+#!/bin/bash
+echo "Enter network address (e.g. 192.168.0): "
+read net
+echo "Enter starting host range (e.g. 1): "
+read start
+echo "Enter ending host range (e.g. 254): "
+read end
+echo "Enter ports space-delimited (e.g. 21-23 80): "
+read ports
+for ((i=$start; i<=$end; i++))
+do
+    nc -nvzw1 $net.$i $ports 2>&1 | grep -E 'succ|open' &
+done
+wait
+
+
+
+
+udp network scan using netcat:::
+#!/bin/bash
+echo "Enter network address (e.g. 192.168.0): "
+read net
+echo "Enter starting host range (e.g. 1): "
+read start
+echo "Enter ending host range (e.g. 254): "
+read end
+echo "Enter ports space-delimited (e.g. 21-23 80): "
+read ports
+for ((i=$start; i<=$end; i++))
+do
+    nc -nuvzw1 $net.$i $ports 2>&1 | grep -E 'succ|open' &
+done
+wait
+
+net
