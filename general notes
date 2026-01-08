@@ -1,3 +1,15 @@
+';';';';';';';';';';';';';';';';';';';';';';';';';';{NETWORKING METHODOLIGY};'';';';';'';';';';';';';';';';';';';';';';';';'';';';;';';
+1. scan ip
+2. netcat ip
+3. wget -r (http/ftp)
+4. Exploit
+5. passive internal (share drive,network connecs, arp, routing tables, services, ip a)
+6. active internal  (ping sweeps, 
+7. pivot
+8. repeat
+
+
+
 look into static cam and arp entries
 analyze ipv4 packet header
 CDP is cisco proprietary and is clear text
@@ -49,7 +61,7 @@ wait
 
 
 
-             ; ; ;;; ;   ;;; ;;; ;;;;;; ;;;;;;;;;;;;; ;; PASSIVE INTERNAL DISCOVERY;;; ;; ;  ;; ;;; ;;
+           ; ; ;;; ;   ;;; ;;; ;;;;;; ;;;;;;;;;;;;; ;; PASSIVE INTERNAL DISCOVERY;;; ;; ;  ;; ;;; ;;
 ::network connections:: 
 Windows: netstat
 Linux: ss -antlp
