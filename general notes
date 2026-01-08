@@ -47,4 +47,16 @@ do
 done
 wait
 
-net
+
+
+
+::network connections:: 
+Windows: netstat
+Linux: ss -antlp
+
+
+service files::
+Windows: %SystemRoot%\system32\drivers\etc\services
+Linux/Unix: /etc/services
+
+
