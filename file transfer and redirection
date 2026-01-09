@@ -24,9 +24,18 @@ FTP: FILE TRANSFER PROTOCOL
 
 
 NETCAT: 
-
-
-
+  MODES;  SERVER
+          CLIENT
+               --[CLIENT TO LISTENER   
+                  TO RECIEVE FILE 
+             NC -LVP 9001 > NEWFILE.TXT 
+                  TO SEND FILE
+              nc 172.16.82.106 9001 < file.txt
+                                                      --[LISTNER TO CLIENT 
+                                                           TO SEND FILE(LISTENER)
+                                                      nc -lvp 9001 < file.txt
+                                                           TO RECIEVE FILE(CLIENT)
+                                                      nc 172.16.82.106 9001 > newfile.txt
 
 
 SFTP: SECCURE FILE TRTANFER PROTO 
