@@ -1,1 +1,48 @@
 chinas book 100 year marathon
+
+TFTP
+  .UDP
+  .SMALL
+  .NO TERMINAL
+  .NOT SECURE
+  .NO DIRECTORY
+  .PXE
+
+FTP: FILE TRANSFER PROTOCOL
+  TWO TCP CONNECTIONS
+  AUTHENTICATION IS CLEAR TEXT AND CAN BE CAPTURED
+  ASSUMES YOU WANT TO PRFEORM COMMAND ANONOMYS 
+
+      ACTIVE :
+           WE TELL THEM INFO
+     
+      PASSIVE:
+              THEY TELL US INFO
+              MUST SPECIFY THAT YOU WANT TO ENTER PASSIVE
+              WGET -R FTP://<IP>
+              
+
+
+NETCAT: 
+
+
+
+
+
+SFTP: SECCURE FILE TRTANFER PROTO 
+   
+
+SCP: SECURE COPY PROTO
+     TCP 22
+     MUST KNOW LOCATION OF FILE BEFORE COPYING
+     SYMETRIXC AND ASYMETRIC ENCRYPTION
+                               <.> OPTION MEANS COPY TO PRESENT WORKING DIRECTORY 
+                                                --   [COPY FROM REMOTE STUDENT TO OUR HOME STUDENT]
+                                                scp student@172.16.82.106:secretstuff.txt /home/student
+                                                --   [COPY FROM OUR STUDENT TO REMOTE STUDENT]
+                                                scp secretstuff.txt student@172.16.82.106:/home/student
+                                                --   [COPY FROM REMOTE TO REMOTE]
+                                                scp -3 student@172.16.82.106:/home/student/secretstuff.txt student@172.16.82.112:/home/student
+
+
+
