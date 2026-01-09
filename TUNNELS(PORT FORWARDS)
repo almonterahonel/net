@@ -1,0 +1,2 @@
+[Create a Dynamic Port Forward to target device]
+       ssh student@172.16.82.106 -D 9050
