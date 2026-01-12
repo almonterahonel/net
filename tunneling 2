@@ -20,3 +20,30 @@ transfering of data with ligetiment protocols to tranfer data in inlegitaemet wa
 
 
 
+
+
+
+
+::::::::::::::::;::::::::::SECURE SHELL (SSH) 
+V1 AND V2
+authenticatino encryption and intergrity
+can x11 forwarding
+client
+server
+session
+KEYS
+    user-assymetric used to indentify user to the server
+    host- asymmetric public used to identify the host to the server
+    session- symmetric created by the client in the server
+
+       SSH components
+               (config files)
+                  .client conf file (/etssh/ssh_config)
+ 
+                  .server conf file (/etc/ssh/sshd_conf)
+ 
+                  .known host file  (~/.ssh/known_host) conatins sha256 fingerprint for host key
+
+
+
+
