@@ -1,11 +1,11 @@
-:::::::::::::::TYPES OF TUNNELING
+::::::::::::::::::::::::::::::::TYPES OF TUNNELING
 Duel Stack: networks using both ipv4 and ipv6; not interchangably 
 6 in 4: 
 6 to 4: gateways encapsulate ipv6 packets withen ipv4
 4 to 6: 
 teredo: RFC 4380; Allows ipv4 clients to access ipv6 clients; commonly used behind nats
 ISATAP: used for internal networks
-:::::::::::::::COVERT CHANNELS 
+:::::::::::::::::::::::::::::::::COVERT CHANNELS 
 transfering of data with ligetiment protocols to tranfer data in inlegitaemet ways; [usually icmp, dsn, http] ;; messages over ICMP.
      TYPES:
         .STORAGE 
@@ -24,25 +24,45 @@ transfering of data with ligetiment protocols to tranfer data in inlegitaemet wa
 
 
 
-::::::::::::::::;::::::::::SECURE SHELL (SSH) 
+::::::::::::::::;::::::::::::::::::::::::::::SECURE SHELL (SSH) 
 V1 AND V2
 authenticatino encryption and intergrity
 can x11 forwarding
 client
 server
 session
-KEYS
-    user-assymetric used to indentify user to the server
+::::::::::::::::::SSH components
+               ( KEYS )
+     user-assymetric used to indentify user to the server
     host- asymmetric public used to identify the host to the server
     session- symmetric created by the client in the server
 
-       SSH components
+       
                (config files)
                   .client conf file (/etssh/ssh_config)
  
                   .server conf file (/etc/ssh/sshd_conf)
  
                   .known host file  (~/.ssh/known_host) conatins sha256 fingerprint for host key
+
+
+
+                                                                                                         'PORT FORWARDING' 
+
+
+SSH OPTIONS
+     -L OPENING PORT ON YOUR LOCAL MACHINE
+     -R OPENING PORT ON REMOTE MACHINE THAT CONNECTS BACK TO YOU
+     -D SOCKS4 PROXY TUNNEL WHERE TARGET IP:PORT IS SPECCIFIED DYNAMICALLY
+     -NT USED AFTER TUNNEL IS SET, MEANS "DO NOT EXECUTE A REMOTE COMMAND AND DIASBLE PSEUDO-TTY".
+
+
+   LOCAL PORT FORWARDING SYNTAX 
+           SSH -P <ALT CLIENT SSH PORT> <USER@SERVER IP> -L <LOCAL PORT>:TGT IP:TGT PORT
+                  <ON MY COMPUTER                           <ON MY COMP>:      :VULNURABLE PORT, 22, 80
+      
+     ONCE THIS TUNNEL IS SET, SSH <TGT USER@LOCALHOST -P 1111
+
 
 
 
