@@ -1,0 +1,22 @@
+:::::::::::::::TYPES OF TUNNELING
+Duel Stack: networks using both ipv4 and ipv6; not interchangably 
+6 in 4: 
+6 to 4: gateways encapsulate ipv6 packets withen ipv4
+4 to 6: 
+teredo: RFC 4380; Allows ipv4 clients to access ipv6 clients; commonly used behind nats
+ISATAP: used for internal networks
+:::::::::::::::COVERT CHANNELS 
+transfering of data with ligetiment protocols to tranfer data in inlegitaemet ways; [usually icmp, dsn, http] ;; messages over ICMP.
+     TYPES:
+        .STORAGE 
+            PAYLOAD
+            HEADER; tcp and ip header( takes longer because header is a set size) 
+        .TIMING
+            modifying legit traffic
+            delaying packets
+            watch ttl change
+
+
+
+
+
