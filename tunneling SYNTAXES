@@ -74,3 +74,10 @@ ONLY ONE DYNAMIC TUNNEL MA BE USED AT A TIME
           SSH <USER>@<IP> -R <PORT>:<IP>:<PORT>
               <ME@MYCOMP>   <PORT I WANT OPEN MY COMP>:<IP OF TGT>:<PORT WE WANT TO GIVE OURSELVES ACCESS TO>              
 
+
+BIH$ TELNET 10.50.87.199  ( because SSH was off on rick)
+RICK$ ip a  (find other ips to access )
+rick$ ssh student@ IH float ip -R 1111:localhost:22 -NT  ( set up a reverse port because even tho rick is clocking ssh, that doesnt mean we are )
+BIH$ ssh Rick@localhost -p 1111 -D 9050 -NT ( sets up the connection for us to forward our commands using proxychain)
+new term BIH$ ssh Rick@localhost -p 1111 -L 2222:second ip we found:22 -NT (sets up a local forward to the new ip using the connection we have to our rick ip) 
+
