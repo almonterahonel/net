@@ -123,3 +123,10 @@ Below are a series of useful commands installed on this Internet_Host to use whi
         b. netcat
             nc 10.10.0.40 1234 < flag.png
             nc -lvp 1234 > flag.png
+
+
+
+
+
+    BPF
+(ip[8]=1&&ip[9]=1)||(ip[8]=1&&ip[9]=17)
